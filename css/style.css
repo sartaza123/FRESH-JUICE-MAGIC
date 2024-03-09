@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+body{
+    overflow: hidden !important;
+}
+a:focus{
+    outline: none;
+    box-shadow: none;
+}
+input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+input:focus-visible{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+button:focus,
+:focus-visible{
+    border: none;
+    outline: none;
+}
+:root{
+    --pear-can: #e6ffde;
+    --apple-can: #f2675a;
+    --exotic-can: #9590f1;
+    --pear-logo: #088832;
+    --apple-logo: #ec4458;
+    --exotic-logo: #6464ff;
+    --pear-background: #c9e78a;
+    --apple-background: #ffb2b2;
+    --exotic-background: #c1bff2;
+    --black-color: #000000;
+    --white-color: #ffffff;
+}
+
+.h1{
+    font-family: 'Lexend', sans-serif;
+    font-size: 400px !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    color: var(--white-color) !important;
+}
+h2{
+    font-family: 'Lexend', sans-serif;
+    font-size: 40px;
+    line-height: normal;
+    margin: 0;
+    font-weight: 900;
+}
+.header{
+    padding: 22px 28px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 99;
+    text-align: center;
+}
+.logo{
+    color: var(--pear-logo);
+}
+.h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.can-image{
+    min-width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-image: url(https://www.yudiz.com/codepen/fruity/cane.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-size: 100% auto;
+    mask-size: 100% auto;
+    overflow: hidden;
+}
+.can-image img{
+    width: 100%;
+}
+.can-labels{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300% !important;
+    mix-blend-mode: multiply !important;
+    transition: all 0.5s ease-in-out;
+}
+.fruit-image{
+    opacity: 1;
+    position: absolute;
+}
+.image1{
+    max-width: 280px;
+    bottom: 100px;
+}
+.image2{
+    max-width: 250px;
+    top: 25px;
+    left: 25px;
+}
+.image3{
+    max-width: 210px;
+    top: 25px;
+    right: 25px;
+}
+.image4{
+    max-width: 295px;
+    bottom: 100px;
+    right: 0;
+}
+
+.section-container-main{
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+.section-container{
+    width: 300vw;
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+}
+.section{
+    min-width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    background: var(--pear-background);
+}
+.section:nth-child(2){
+    background: var(--apple-background);
+}
+.section:nth-child(3){
+    background: var(--exotic-background);
+}
+button{
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    z-index: 99;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background: var(--white-color);
+    border: none;
+    font-size: 50px;
+    color: var(--apple-logo);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+#prevButton{
+    left: 30px;
+    right: unset;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+.wave{
+    animation: wave-apple-effect 4s linear infinite;
+    animation-direction: normal;
+}
+@keyframes wave-pear-effect{
+    0%{
+        box-shadow: 0 0 0 0px var(--pear-background),
+            0 0 0 0px var(--pear-background);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
+            0 0 0 0px var(--pear-background);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
+            0 0 0 30px rgba(0, 0, 0, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0px rgba(60, 41, 188, 0),
+            0 0 0 30px rgb(0, 230, 115)
+    }
+}
+@keyframes wave-apple-effect{
+    0%{
+        box-shadow: 0 0 0 0px var(--apple-background),
+            0 0 0 0px var(--apple-background);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
+            0 0 0 0px var(--apple-background);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
+            0 0 0 30px rgba(0, 0, 0, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0px rgba(60, 41, 188, 0),
+            0 0 0 30px rgb(0, 230, 115)
+    }
+}
+@keyframes wave-exotic-effect{
+    0%{
+        box-shadow: 0 0 0 0px var(--exotic-background),
+            0 0 0 0px var(--exotic-background);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
+            0 0 0 0px var(--exotic-background);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
+            0 0 0 30px rgba(0, 0, 0, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0px rgba(60, 41, 188, 0),
+            0 0 0 30px rgb(0, 230, 115)
+    }
+}
